@@ -1,0 +1,70 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="_4_3_app.MainWindow"
+		Background="White"
+        Title="MyApp">
+
+	<Grid ShowGridLines="True"
+		  RowDefinitions="*,*,*,*"
+		  ColumnDefinitions="*,*">
+		
+		<Canvas Grid.Row="3">
+			<TextBlock Canvas.Left="5" Canvas.Bottom="5">
+				Tags: Tag1, Tag2, Tag3
+				</TextBlock>			
+		</Canvas>
+
+		<Canvas Grid.Row="3"
+				Grid.Column="1">
+			<TextBlock Canvas.Left="0" Canvas.Bottom="5">
+				Rate the article
+			</TextBlock>
+
+			<Button Canvas.Left="110" Canvas.Bottom="7">					
+			</Button>
+			<Button Canvas.Left="130" Canvas.Bottom="7">
+			</Button>
+			<Button Canvas.Left="150" Canvas.Bottom="7">
+			</Button>
+			<Button Canvas.Left="170" Canvas.Bottom="7">
+			</Button>
+			<Button Canvas.Left="190" Canvas.Bottom="7">
+			</Button>
+		</Canvas>
+
+		<StackPanel Grid.Row="1">
+			<TextBlock TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+			</TextBlock>
+		</StackPanel>
+
+		<Grid Grid.Column="2"
+			  Grid.Row="1"
+			ShowGridLines="True"
+			ColumnDefinitions="*,*"
+			  RowDefinitions="*,*">
+			<StackPanel Grid.Column="1">
+				<TextBlock TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+				</TextBlock>
+			</StackPanel>
+		</Grid>
+
+		<Panel Grid.Row="2">
+			<Image Margin="110" Height="150" Width="150"
+				   Source="resm:Avalonia.Skia.Assets.NoiseAsset_256X256_PNG.png?assembly=Avalonia.Skia"/>
+		</Panel>
+
+		<DockPanel Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2">
+			<TextBlock Text="Home  " />
+			<TextBlock Text="Prices  " />
+			<TextBlock DockPanel.Dock="Right"
+                        TextAlignment="Right"
+                        Text="RSS  " />
+			<TextBlock DockPanel.Dock="Right" Text="About us" />
+		</DockPanel>
+	</Grid>
+</Window>
